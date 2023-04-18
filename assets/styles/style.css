@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   gap: 30px;
   align-items: center;
-  background-color: rgb(249, 238, 238);
+  background-color: #f9eeee;
   opacity: 0.7;
 }
 
