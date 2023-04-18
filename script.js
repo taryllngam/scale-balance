@@ -4,22 +4,22 @@ const display = document.getElementById('display')
 const buttonElement = document.getElementById('btn')
 
 const getList = () => {
-  let balanceList = weightList.value.split(',');
-  return balanceList;
+  const balanceList = weightList.value.split(',')
+  return balanceList
 }
 
 const getVariables = () => {
-  let variables = inputs.value.split(',');
-  return variables;
+  const variables = inputs.value.split(',')
+  return variables
 }
 
-const balance = ()=>{
-  let listArr = getList()
-  let valArr = getVariables()
-  for(let i = 0; i < listArr.length; i++){
-    for(let j =  0; j < listArr.length; j++) {
-      if ((+valArr[0] + +listArr[i]) === (+valArr[1] + +listArr[j])) {
-        return (`${listArr[i]}, ${listArr[j]}`);
+const balance = () => {
+  const listArr = getList()
+  const valArr = getVariables()
+  for (let i = 0; i < listArr.length; i++) {
+    for (let j = 0; j < listArr.length; j++) {
+      if (+valArr[0] + +listArr[i] === +valArr[1] + +listArr[j]) {
+        return `${listArr[i]}, ${listArr[j]}`
       }
     }
   }
@@ -29,5 +29,4 @@ const balance = ()=>{
 
 buttonElement.addEventListener('click', () => {
   display.innerHTML = balance()
-});
-
+})
